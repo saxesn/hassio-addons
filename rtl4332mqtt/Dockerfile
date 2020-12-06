@@ -17,7 +17,7 @@ LABEL Description="This image is used to start a script that will monitor for RF
 #
 # First install software packages needed to compile rtl_433 and to publish MQTT events
 #
-RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev python3 py3-pip && \
+RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     pip3 install paho-mqtt && \
     mkdir /tmp/src && \
     cd /tmp/src && \
@@ -40,7 +40,7 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev pyth
     make install && \
     apk del build-deps && \
     rm -r /tmp/src && \
-    apk add --no-cache libusb mosquitto-clients jq
+    apk add --no-cache libusb mosquitto-clients jq python3 py3-pip
 
 #
 # Define an environment variable
