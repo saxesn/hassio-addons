@@ -38,9 +38,10 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     make && \
     make install && \
     apk del build-deps && \
-    rm -r /tmp/src && \
     apk add --no-cache libusb mosquitto-clients jq python3 py3-pip && \
-    pip3 install paho-mqtt
+    pip3 install paho-mqtt && \
+    rm -r /tmp/src
+
 
 #
 # Define an environment variable
