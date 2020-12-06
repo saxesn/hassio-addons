@@ -28,7 +28,7 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     make install && \
     chmod +sx /usr/local/bin/rtl_* && \
     cd /tmp/src/ && \
-    git clone https://github.com/merbanan/rtl_433 && \
+    git clone https://github.com/panctronic/rtl_433 && \
     cd rtl_433/ && \
     cp examples/rtl_433_mqtt_hass.py /usr/local/bin/ && \
     chmod +sx /usr/local/bin/rtl_* && \
