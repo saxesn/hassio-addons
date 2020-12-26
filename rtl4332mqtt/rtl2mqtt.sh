@@ -224,6 +224,8 @@
 # [175]  LaCrosse Technology View LTV-R1 Rainfall Gauge
 
 export LANG=C
+# export below used for current hassio library loading for rtl_433
+export LD_LIBRARY_PATH=/usr/local/lib64
 PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 
 CONFIG_PATH=/data/options.json
